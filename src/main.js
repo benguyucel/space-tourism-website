@@ -6,8 +6,8 @@ import { createPinia } from "pinia";
 import { useDataStore } from "./store";
 const pinia = createPinia();
 const app = createApp(App);
-app.use(pinia);
 app.use(router);
+app.use(pinia);
 async function initApp() {
   const dataStore = useDataStore();
   await dataStore.fetchData();
